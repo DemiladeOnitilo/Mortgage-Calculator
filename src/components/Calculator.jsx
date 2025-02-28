@@ -79,7 +79,7 @@ const Calculator = ({setCalculated, setIsCalculated}) => {
             monthlyAmount: 0,
             totalAmount: 0
         });
-        setIsCalculated(false);
+       
         setAmountErrorMessage("")
         setTermErrorMessage("")
         setRateErrorMessage("")
@@ -93,7 +93,7 @@ const Calculator = ({setCalculated, setIsCalculated}) => {
             <h1 className='text-2xl'>Mortgage Calculator</h1>
             <button type='button' onClick={handleClear} className='border-b-1 cursor-pointer hover:opacity-50'>Clear All</button>
         </form>
-        <form onSubmit={ (e) =>{e.preventDefault(), handleSubmit()}} className='w-full h-full text-left flex flex-col justify-between' >
+        <form aria-label='Mortgage Calculator' onSubmit={ (e) =>{e.preventDefault(); handleSubmit()}} className='w-full h-full text-left flex flex-col justify-between' >
                 <MainInput 
                     value={mortgageAmount}
                     setState={setMortgageAmount}
