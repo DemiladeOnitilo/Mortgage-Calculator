@@ -88,18 +88,18 @@ const Calculator = ({setCalculated, setIsCalculated}) => {
     }
 
   return (
-    <div className='w-[50%] h-auto text-left p-10 flex flex-col gap-y-7'>
-        <form className='flex justify-between'>
+    <div className='w-full lg:w-[50%] h-full text-left p-10 lg:p-10 flex flex-col gap-y-3 lg:gap-y-7'>
+        <form className='flex flex-col md:flex-row md:justify-between lg:flex-row lg:justify-between'>
             <h1 className='text-2xl'>Mortgage Calculator</h1>
-            <button type='button' onClick={handleClear} className='border-b-1 cursor-pointer hover:opacity-50'>Clear All</button>
+            <button type='button' onClick={handleClear} className='border-b-1 cursor-pointer hover:opacity-50 w-[20%]'>Clear All</button>
         </form>
-        <form aria-label='Mortgage Calculator' onSubmit={ (e) =>{e.preventDefault(); handleSubmit()}} className='w-full h-full text-left flex flex-col justify-between' >
+        <form aria-label='Mortgage Calculator' onSubmit={ (e) =>{e.preventDefault(); handleSubmit()}} className='w-full h-full text-left flex flex-col lg:justify-between' >
                 <MainInput 
                     value={mortgageAmount}
                     setState={setMortgageAmount}
                     amountErrorMessage={amountErrorMessage}
                 />
-                <div className='flex justify-between'>
+                <div className='flex flex-col lg:flex-row lg:justify-between w-full gap-x-4'>
                     <SubInput 
                         label= 'Mortgage Term'
                         value={mortgageTerm}

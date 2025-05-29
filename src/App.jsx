@@ -12,8 +12,8 @@ const App = () => {
 
 
   return (
-    <div className=' w-full h-[100vh] slate-100-bg flex justify-center items-center plus-jakarta-sans'>
-      <div className='flex h-170 w-[60%] bg-white rounded-3xl'>
+    <div className=' w-screen h-auto lg:h-[100vh] slate-100-bg flex justify-center items-center plus-jakarta-sans'>
+      <div className='flex flex-col lg:flex-row h-full justify-center lg:justify-between  lg:h-170 w-screen lg:w-[80%] xl:w-[60%] bg-white rounded-3xl'>
         <Calculator 
           setCalculated={setCalculated}
           setIsCalculated={setIsCalculated}
